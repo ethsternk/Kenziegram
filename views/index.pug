@@ -1,0 +1,13 @@
+doctype
+html
+    head
+        title= "Kenziegram"
+        link(rel='stylesheet' href='style.css')
+    body
+        h1= "Welcome to Kenziegram"
+        form(action='http://localhost:3000/upload' method='post' enctype='multipart/form-data')
+            input(type='file' id='file' name='myFile')
+            input(type='submit' id='submit' value='Upload')
+        div(id='images')
+            each pic in images
+                img(src= pic)
