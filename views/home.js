@@ -18,7 +18,7 @@ function fetchImages() {
                 document.getElementById("images").innerHTML += `<img src="${data.images[i]}">`;
             }
             latestFetchStamp = Date.now();
-            setTimeout(fetchImages, 3000);
+            setTimeout(fetchImages, 5000);
         })
 }
 
