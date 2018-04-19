@@ -1,0 +1,15 @@
+html
+    head
+        title="Kenziegram"
+        link(rel='stylesheet' href='home.css')
+    body
+        h1="Welcome to Kenziegram"
+        //- button(id='updateButton')="update"
+        form(action='http://192.168.200.24:3000/upload' method='post' enctype='multipart/form-data')
+            input(type='file' id='file' name='myFile')
+            input(type='submit' id='submit' value='Upload')
+        div(id='images')
+            each pic in images
+                if pic != '.DS_Store'
+                    img(src=pic)
+        script(src='home.js')
